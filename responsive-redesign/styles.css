@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&display=swap");
+
+.logo {
+  background-image: none;
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 40px;
+  width: auto !important;
+  display: flex !important;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    font-size: 25px;
+  }
+}
+
+:root {
+  --green: #0ebe3f;
+  --purple: #9747ff;
+
+  --border-primary: black;
+  --border-secondary: #aaaaaa; /* me rn */
+
+  --label-primary: black;
+  --label-secondary: rgba(0, 0, 0, 0.5);
+  --placeholder-disabled: rgba(0, 0, 0, 0.33);
+
+  --element-primary: white;
+  --element-secondary: #d9d9d9;
+  --element-hover: #f0f0f0;
+  --element-active: #dddddd;
+  --element-border: #cccccc;
+
+  --accent-regular: #468bf1;
+  --accent-hover: #2073ee;
+  --accent-active: #105fd5;
+  --accent-border: #0c4499;
+  --accent-focus-border: #468bf1;
+
+  --label-large: 500 20px Overpass;
+  --label-regular: 500 16px Overpass;
+  --label-small: 500 14px Overpass;
+  --label-tiny: 700 9px Overpass;
+
+  --header-large: 700 24px Overpass;
+  --header-regular: 700 14px Overpass;
+
+  --body-regular: 400 14px Overpass;
+  --body-small: 500 12px Overpass;
+
+  --mono-medium: 400 14px Fira Code;
+  --mono-small: 400 11px Fira Code;
+
+  --icon-large: 900 20px "Font Awesome 6 Free";
+  --icon-regular: 900 16px "Font Awesome 6 Free";
+  --icon-small: 900 14px "Font Awesome 6 Free";
+}
+
+:is(._button, ._dropdown) {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: var(--element-primary);
+  border: 1px solid var(--element-border);
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 10px 0px #0000000d;
+  font: var(--label-regular);
+  padding: 0 14px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+:is(._button, ._dropdown):hover {
+  background-color: var(--element-hover);
+}
+:is(._button, ._dropdown):active {
+  background-color: var(--element-active);
+  box-shadow: 2px 2px 3px 0px #0000001a inset;
+}
+:is(._button, ._dropdown)[disabled] {
+  color: var(--placeholder-disabled);
+  background-color: var(--element-primary);
+  box-shadow: 2px 2px 10px 0px #0000000d;
+}
+._button-selected {
+  background-color: var(--accent-regular);
+  border: 1px solid var(--accent-border);
+  color: white;
+  box-shadow: 2px 2px 10px 0px #00000033;
+}
+._button-selected:hover {
+  background-color: var(--accent-hover);
+}
+._button-selected:active {
+  background-color: var(--accent-active);
+  box-shadow: 2px 2px 5px 0px #00000080 inset;
+}
+
+._text-field {
+  height: 44px;
+  border-radius: 8px;
+  background-color: var(--element-primary);
+  border: 1px solid var(--element-border);
+  box-shadow: 2px 2px 5px 0px #55555526 inset;
+  padding-inline: 12px;
+  padding-top: 4px;
+  font: var(--label-regular);
+}
+._text-field:focus {
+  outline: none;
+  border: 1px solid var(--accent-focus-border);
+  box-shadow: 2px 2px 5px 0px #55555526 inset, 0px 0px 8px 0px #468bf1;
+}
+
+._dropdown {
+  justify-content: space-between;
+}
+._dropdown:not(._dropdown-sm)::after,
+._dropdown-sm ._dropdown-label::after {
+  content: "\f0d7";
+  font: var(--icon-regular);
+}
+._dropdown-sm ._dropdown-label::after {
+  margin-left: 4px;
+  font: var(--icon-small);
+}
+
+._dropdown-sm {
+  height: 30px;
+  font: var(--label-small);
+  padding-inline: 10px 6px;
+}
+._dropdown-sm ._dropdown-secondary {
+  color: var(--label-secondary);
+  font: var(--body-small);
+}
+
+._inline-button {
+  font: var(--label-tiny);
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: var(--accent-regular);
+  color: white;
+  height: 13px;
+  border-radius: 1000px;
+  padding-inline: 6px;
+}
+._inline-button:hover {
+  background: var(--accent-hover);
+}
+._inline-button:active {
+  background: var(--accent-active);
+}
+
+._float-footer {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  box-shadow: 0px -4px 10px 0px #0000001a;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+._top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+._bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+._left,
+._center {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+._left:not(._button-selected),
+._center:not(._button-selected) {
+  border-right: none;
+}
+
+._right,
+._center {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+:not(._button-selected) + ._right,
+:not(._button-selected) + ._center {
+  margin-left: -1px;
+}
+._button-selected + ._right,
+._button-selected + ._center {
+  border-left: none;
+}
+
+@media (max-width: 767px) {
+  ._desktop-only {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  ._mobile-only {
+    display: none !important;
+  }
+}
+
+._main-table {
+  border: 1px solid var(--border-secondary);
+  border-radius: 5px;
+  border-collapse: separate;
+  max-width: 100%;
+}
+._main-table th {
+  background: var(--element-secondary);
+  font: var(--header-regular);
+}
+._main-table th,
+._main-table td {
+  border: none;
+  vertical-align: middle;
+}
+._main-table th:not(:last-child),
+._main-table td:not(:last-child) {
+  border-right: 1px solid var(--border-primary);
+}
+._main-table th,
+._main-table tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border-primary);
+}
+._main-table td:first-child {
+  font: var(--label-regular);
+  text-align: center;
+}
+._main-table td:nth-child(2) a {
+  font: var(--mono-small);
+  text-decoration: underline;
+}
+._main-table td:nth-child(3) {
+  font: var(--mono-small);
+}
+._main-table td:nth-child(4) div {
+  display: flex;
+  gap: 8px;
+  font: var(--body-regular);
+}
+._main-table td:nth-child(4) div > span {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: min(calc(100vw - 352px), calc(1000px - 352px));
+}
+._main-table td:last-child {
+  font: 500 12px Overpass;
+  padding: 6px 8px;
+}
+
+._main-list {
+  list-style: none;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+._main-list li {
+  display: grid;
+  grid-template-columns: 19px max-content 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 4px;
+  grid-template-areas:
+    "marker name name name"
+    "x x x rest"
+    "s-label s-label s-val rest"
+    "r-label r-label r-val rest";
+}
+
+._main-list ._marker {
+  grid-area: marker;
+  justify-self: end;
+  font: var(--label-large);
+  color: var(--label-secondary);
+}
+._main-list ._name {
+  grid-area: name;
+  font: var(--label-large);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+._main-list ._s-label {
+  grid-area: s-label;
+  margin-top: -4px;
+  justify-self: end;
+  font: var(--label-small);
+}
+._main-list ._s-val {
+  grid-area: s-val;
+  margin-top: -4px;
+  font: var(--mono-medium);
+  color: var(--accent-regular);
+}
+._main-list ._r-label {
+  grid-area: r-label;
+  justify-self: end;
+  font: var(--label-small);
+}
+._main-list ._r-val {
+  grid-area: r-val;
+  font: var(--mono-medium);
+}
+._main-list ._r-none {
+  font: var(--body-regular);
+  color: var(--label-secondary);
+}
+._main-list ._rest {
+  grid-area: rest;
+  font: var(--body-regular);
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}

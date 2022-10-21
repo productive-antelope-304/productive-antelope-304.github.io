@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<title>Responsive Redesign</title>
+	</head>
+<body>
+<h1><strong style="font-size: 30px; font-weight: 900; font-family: system-ui, sans-serif;">CSCI1300</strong><br>Responsive Redesign</h1>
+<article>
+
+<p><strong>Context</strong>: We were asked to pick an existing public website, identify issues with its accessibility, usability, learnability, and memorability. Then, we were asked to create a new, responsive, web design for mobile, tablet, and desktop. I first created a low-fidelity wireframe using a whiteboarding/prototyping tool called <a href="https://excalidraw.com">Excalidraw</a>. Then, I used Figma to create a high-fidelity design based on the wireframe, deciding on specific metrics for various components and picking out nice colors/fonts. Finally, I implemented the Figma design in HTML/CSS.</p>
+
+<p>I selected the US Patent &amp; Trademark Office’s Trademark Electronic Search Service (USPTO TESS) search results page, because I’ve found it ugly and hard to use in my own personal experience.</p>
+
+<p><a href="redesign">View the Redesign!</a></p>
+
+<h2>Source website</h2>
+
+<p>Unfortunately I can’t give you a direct link (because the links expire), but you can:</p>
+
+<ol>
+	<li>Go to <a href="https://tmsearch.uspto.gov/bin/gate.exe?f=login&amp;p_lang=english&amp;p_d=trmk">https://tmsearch.uspto.gov/bin/gate.exe?f=login&amp;p_lang=english&amp;p_d=trmk</a></li>
+	<li>Click “Basic Word Mark Search (New User)”</li>
+	<li>Enter “Brown University” (without quotes) as the “Search Term”</li>
+	<li>Click “Submit Query”</li>
+</ol>
+
+<p>Here’s a screenshot of the resulting page as of October 2022:</p>
+
+<a href="original.png"><img src="original.png" alt="Click to expand"/><figcaption>Click to expand</figcaption></figure></a>
+
+<h2>Problems with the old design</h2>
+
+<p>Usability:</p>
+
+<ul>
+	<li>largest text is # of results which isn’t super relevant</li>
+	<li>search result order does not reflect closest match to query</li>
+	<li>“logout” button is confusing (since closing the tab also seems to log you out)</li>
+	<li>extremely long trademark names make the layout look weird, as shown</li>
+	<li>LIVE/DEAD are similar in appearance, so it can be hard to tell them apart at a glance even as an expert user</li>
+</ul>
+
+<p>Learnability:</p>
+
+<ul>
+	<li>the blue buttons are somewhat visually inconsistent (in font sizing) and do not look like buttons (especially since other parts of the page use system button styles)</li>
+	<li>confusing search syntax</li>
+	<li>lots of seemingly duplicate links, unclear which ones are actually going to different places</li>
+</ul>
+
+<p>Memorability:</p>
+
+<ul>
+	<li>The blue buttons have the same overall visual appearance, so it could be hard to remember where the buttons you most frequently need to use are located.</li>
+</ul>
+
+<p>Accessibility (via WAVE):</p>
+
+<ul>
+	<li>WAVE reported several instances where <code>&lt;table&gt;</code> elements were used for layout, which seems like a result of the website being old rather than an actual issue</li>
+	<li>It also reported low contrast for the vertical bars between items in the top menu, which isn’t too much of an issue IMO since the spacing already conveys the separation between the menu items even if you couldn’t see the bars</li>
+	<li>A couple of inputs were missing labels, which was definitely an issue that should be fixed</li>
+	<li>There were a couple of empty links, which would be confusing for screen reader users.</li>
+	<li>The text in the bottom is also very small.</li>
+</ul>
+
+<h2>Visual redesign</h2>
+
+<h3>Low-fidelity Wireframing</h3>
+
+<p>[wireframe-desktop.svg] [wireframe-tablet.svg] [wireframe-mobile.svg]</p>
+
+<h3>Visual Design Style Guide</h3>
+
+<p>Note: the navigation bar and footer are excluded from the designs attached below because they are taken from the fancy new parts of the USPTO website</p>
+
+<p><a href="https://www.figma.com/file/9kwgaOcKAFcujRHQTR9smp/Hi-Fi-Prototype?node-id=0%3A1">View on Figma</a></p>
+
+<h4>Colors &amp; Fonts</h4>
+
+<p><img src="hifi/Colors.svg"></p>
+
+<p><img src="hifi/Fonts.svg"></p>
+
+<h4>Buttons</h4>
+
+<p><img src="hifi/Button.svg"></p>
+
+<h4>Text Fields</h4>
+
+<p><img src="hifi/Text-Field.svg"></p>
+
+<h4>Other Controls</h4>
+
+<p><img src="hifi/Composite-Controls.svg"></p>
+
+<h3>High-Fidelity Prototyping</h3>
+
+<p><a href="https://www.figma.com/file/9kwgaOcKAFcujRHQTR9smp/Hi-Fi-Prototype?node-id=19%3A334">View on Figma</a></p>
+
+<p><strong>Tip!</strong> Make sure you’re logged into Figma, then click an element to select it and view exact distances to adjacent elements. Saves on me having to cover the design with a bunch of explicit spacing annotations :)</p>
+
+<h4>Desktop (4K)</h4>
+
+<p><img src="hifi/Desktop.svg"></p>
+
+(cropped)
+
+<p><img src="hifi/Desktop-cropped.svg"></p>
+
+<h4>Tablet</h4>
+
+<p><img src="hifi/Tablet.svg"></p>
+
+<h4>Mobile</h4>
+
+<p><img src="hifi/Mobile.svg"></p>
+
+<h3>Final Result!</h3>
+
+<p><a href="redesign">View the Redesign!</a></p>
+
+<p><img src="desktop.png"></p>
+
+<p><img src="mobile.png"></p>
+
+<h2>Credits</h2>
+
+<ul>
+	<li>All trademarks listed on the website are of course property of their respective owners</li>
+	<li>I copied over the HTML for the header/footer from the main uspto.gov website (specifically <a href="https://www.uspto.gov/trademarks/basics">https://www.uspto.gov/trademarks/basics</a>), with a few tweaks to clarify that my mockup is not an official government product and a tweak to the breadcrumbs.</li>
+	<li>I also brought over the CSS from that webpage to get the HTML to look correct, but all of the components outside of the header and footer were designed by me from scratch (although looking at them now I’m surprised at how closely they match <a href="https://getbootstrap.com/docs/3.4/css/">Bootstrap 3’s form controls</a>)</li>
+	<li>The sans-serif font in the content area is <a href="https://overpassfont.org/">Overpass</a>, and the monospace font is <a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
+</ul>
+
+</article>
+
+<footer>
+	<p>Styles adapted from <a href="https://styles.ulysses.app/styles/simplicity-Yym">Simplicity</a> by <a href="https://styles.ulysses.app/users/leolabs-0zp?type=styles">leolabs</a>. Copyright <span style="position: relative; top: 0.2em">&copy;</span> 2022 [redacted]</p>
+</footer>
+
+</body>
+</html>
+

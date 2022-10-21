@@ -246,3 +246,6 @@ a:target {
     border: 0;
     outline: 0;
 }
+a {
+    color: rgb(48, 79, 234);
+}
