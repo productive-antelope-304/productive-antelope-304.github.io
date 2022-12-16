@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Last | Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <article>
+      <section style="float: right">
+        First Last
+        <br />
+        <a class="subtle" href="mailto:">email@domain.com</a>
+        <br />
+        Providence, RI
+        <br />
+        <span id="date"></span>
+        <script type="module">
+          import formatDate from "https://unpkg.com/date-fns@2.29.3/esm/format/index.js";
+          document.getElementById("date").innerHTML = formatDate(
+            new Date(),
+            "MMMM do, yyyy"
+          ).replace(/(\d+)(\w{2})/, "$1<sup>$2</sup>");
+        </script>
+      </section>
+      <p class="no-indent" style="margin-top: 7em">
+        To whom it may concern,
+        <!-- <span
+        contenteditable="plaintext-only"
+        style="border-bottom: 1.5px dotted #888"
+      >
+        Respected Visitor,
+      </span> -->
+      </p>
+      <p>
+        <label id="l" style="position: relative">
+          <span>Fellow human,</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            style="height: 0.7em; opacity: 0.6; display: none"
+          >
+            <!-- Font Awesome -->
+            <path
+              d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
+            />
+          </svg>
+          <select style="opacity: 0; position: absolute; width: 100%; left: 0">
+            <option selected>Fellow human</option>
+            <option>Madam</option>
+            <option>Sir</option>
+          </select></label
+        >I write to thank you for taking time out of your day to consider me for
+        this opportunity. I understand you are a very busy person, so I will be
+        brief.
+      </p>
+      <script>
+        l.querySelector("span").style.borderBottom = "1px dashed #666";
+        l.querySelector("svg").style.display = null;
+        l.querySelector("select").oninput = () => {
+          l.querySelector("span").textContent =
+            l.querySelector("select").selectedOptions[0].textContent + ",";
+        };
+      </script>
+      <p>
+        <em
+          >I am a student of Computer Science. I am currently pursuing my
+          Bachelor's degree in Computer Science. I am passionate about software
+          engineering and programming and have a strong interest in AI and
+          blockchain technology. Aside from programming, I enjoy playing sports
+          like soccer and badminton, experimenting with photography, and
+          exploring new places.</em
+        >
+        (this is false)
+      </p>
+      <p>
+        While I mainly focus on software development, I have from time to time
+        endeavored to design such software. During my time at Brown University,
+        I took a course in designing User Interfaces and User Experiences for
+        digital computer systems.
+      </p>
+      <p>
+        <em
+          >In addition to the course work, I have also had the opportunity to
+          work on projects outside of my academic requirements which have
+          allowed me to further develop my skills in user interface design. I
+          have designed interfaces for a medical records system, a web
+          application for a clothing company, and an interface for a gaming
+          system.</em
+        >
+        (this is false)
+      </p>
+      <hr />
+      <p>Here is a summary of some of the work I’m proudest of:</p>
+      <ol>
+        <li>
+          I was asked to
+          <a
+            href="https://productive-antelope-304.github.io/responsive-redesign/"
+            >redesign a website and make it mobile-friendly</a
+          >. I selected the United States Patent & Trademark Office’s
+          <a
+            href="https://tmsearch.uspto.gov/bin/gate.exe?f=login&p_lang=english&p_d=trmk"
+            >online search tool</a
+          >, and developed a modern-feeling, responsive design that improves
+          usability.
+        </li>
+        <li>
+          I was tasked with making a React-based web app and decided to embrace
+          the absurdity by
+          <a href="https://productive-antelope-304.github.io/development/"
+            >making it Windows 95 themed</a
+          >
+          while still trying to keep it functional.
+        </li>
+        <li>
+          A team and I
+          <a href="https://productive-antelope-304.github.io/iterative-design/"
+            >came up with a proposed UI design</a
+          >
+          for a startup that delivers prescription drugs directly to people’s
+          homes.
+        </li>
+        <li>
+          I worked with a team to build a tool for saving and completing nested
+          checklists using hypertext.
+        </li>
+      </ol>
+      <p>
+        I hope this overview of my work shows me to be a compelling candidate
+        for the position. It would be the pleasure of a lifetime to work with
+        you.
+      </p>
+      <p class="no-indent" style="text-align: center">Yours respectfully,</p>
+      <p
+        class="no-indent"
+        style="
+          text-align: right;
+          margin-right: 2em;
+          font-family: Zapfino;
+          font-size: 1.5em;
+        "
+      >
+        First Last.
+      </p>
+      <p class="no-indent">
+        P.S. I have attached a more detailed description of my work, if you
+        consider my abilities to be worthy of a deeper consideration.
+      </p>
+    </article>
+    <article>
+      <h2>
+        <a href="https://productive-antelope-304.github.io/responsive-redesign/"
+          >Responsive Redesign</a
+        >
+      </h2>
+      <p>
+        For this assignment, I identified usability, learnability, memorability,
+        and accessibility problems with the existing website; then used those
+        findings to develop a refined approach. I also designed a basic
+        Bootstrap-style UI component framework from scratch, featuring text
+        fields, several styles of button, and dropdowns.
+      </p>
+      <a
+        class="image-left"
+        href="https://productive-antelope-304.github.io/responsive-redesign/desktop.png"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/responsive-redesign/desktop.png"
+        />
+      </a>
+      <a
+        class="image-center"
+        href="https://productive-antelope-304.github.io/responsive-redesign/hifi/Button.svg"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/responsive-redesign/hifi/Button.svg"
+        />
+      </a>
+      <a
+        class="image-right"
+        href="https://productive-antelope-304.github.io/responsive-redesign/mobile.png"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/responsive-redesign/mobile.png"
+        />
+      </a>
+      <div style="clear: both"></div>
+    </article>
+    <article>
+      <h2>
+        <a href="https://productive-antelope-304.github.io/development"
+          >Development</a
+        >
+      </h2>
+      <p>
+        Since this assignment was largely focussed on using React to make a web
+        app, I decided to have a little fun with the UI portion. I used an off
+        the shelf library for the Windows 95/98 theming, but incorporated the
+        elements into a unique UI based around windows. I also carefully
+        adjusted spacing to ensure that things looked good. Finally, I used
+        Stable Diffusion and ImageMagick to create the exact aesthetic I wanted
+        for the city photos. (None of the photos are real)
+      </p>
+      <a class="image-left" href="seattle.png">
+        <img src="images/seattle.png" class="br-0" />
+      </a>
+      <a class="image-right" href="filter.png">
+        <img src="images/filter.png" class="br-0" />
+      </a>
+      <!-- <a
+        class="image-center"
+        href="https://productive-antelope-304.github.io/responsive-redesign/hifi/Button.svg"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/responsive-redesign/hifi/Button.svg"
+        />
+      </a> -->
+      <div style="clear: both"></div>
+    </article>
+
+    <article>
+      <h2>
+        <a href="https://productive-antelope-304.github.io/iterative-design/"
+          >Iterative Design</a
+        >
+      </h2>
+      <p>
+        For this assignment, I worked with a team to identify a
+        recently-launched startup, and then created a mockup for a mobile app
+        based on the description of their company. We went through multiple
+        stages of design, including brainstorming a variety of sketches,
+        consolidating them into a single low-fi wireframe, converting that to a
+        high-fidelity Figma mockup, and then making design adjustments after
+        talking to a professional designer and our peers.
+      </p>
+      <a
+        class="image-left"
+        href="https://productive-antelope-304.github.io/iterative-design/images/sketch-2.png"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/iterative-design/images/sketch-2.png"
+        />
+      </a>
+      <a
+        class="image-center"
+        style="width: 50%; left: 50%"
+        href="https://productive-antelope-304.github.io/iterative-design/images/figma2-4.png"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/iterative-design/images/figma2-4.png"
+        />
+      </a>
+      <a
+        class="image-right"
+        style="width: 40%"
+        href="https://productive-antelope-304.github.io/iterative-design/images/figma-2.png"
+      >
+        <img
+          src="https://productive-antelope-304.github.io/iterative-design/images/figma-2.png"
+        />
+      </a>
+      <div style="clear: both"></div>
+    </article>
+
+    <article>
+      <h2 class="is-a">BearCheck</h2>
+      <p>
+        I worked with a team to design and build a tool for creating and
+        tracking the completion of complex, nested multimedia checklists. We
+        developed tools to enable the checklists to change over time while still
+        retaining the ability to audit previous sessions with the checklist.
+      </p>
+      <a class="image-left" style="margin-left: -30%" href="bear-check-3.png">
+        <img src="images/bear-check-3.png" />
+      </a>
+      <a
+        class="image-center"
+        style="width: 50%; left: 50%; margin-top: -0.25em"
+        href="bear-check-1.png"
+      >
+        <img src="images/bear-check-1.png" />
+      </a>
+      <a class="image-right" style="width: 40%" href="bear-check-2.png">
+        <img src="images/bear-check-2.png" />
+      </a>
+      <div style="clear: both"></div>
+    </article>
+    <footer>
+      <p>
+        Project screenshots taken by me and
+        <span class="ib">&copy; 2021&ndash;2022 me</span> and my collaborators.
+        Background images &amp; textures from Stable Diffusion. Dreamt up for
+        CS1300.
+      </p>
+      <p>
+        Letter writing advice from “<a
+          href="https://archive.org/details/howtowritelette01westgoog"
+          >How To Write Letters: A Manual Of Correspondence, Showing The Correct
+          Structure, Composition, Punctuation, Formalities, And Uses Of The
+          Various Kinds Of Letters, Notes, And Cards</a
+        >” by J. Willis Westlake, 1876
+      </p>
+    </footer>
+  </body>
+</html>
